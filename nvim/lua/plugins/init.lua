@@ -24,6 +24,7 @@ return {
         "go",
         "gowork",
         "gomod",
+        "python",
       },
     },
   },
