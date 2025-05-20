@@ -19,3 +19,11 @@ lspconfig.gopls.setup {
     },
   },
 }
+
+lspconfig.pylsp.setup {
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  cmd = { "pylsp" },
+  filetypes = { "python", "py" },
+  root_dir = lspconfig.util.root_pattern("pyproject.toml", ".git"),
+}
