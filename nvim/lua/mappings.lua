@@ -1,11 +1,23 @@
-require "nvchad.mappings"
-
--- add yours here
-
 local map = vim.keymap.set
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
-map("i", "jk", "<ESC>")
-map("n", "dd", '"_dd')
+-- nvimtree
+map("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")
+map("n", "<C-h>", "<cmd> NvimTreeFocus <CR>")
 
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+-- telescope
+map("n", "<leader>ff", "<cmd> Telescope find_files <CR>")
+map("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
+
+-- bufferline, cycle buffers
+map("n", "<Tab>", "<cmd> BufferLineCycleNext <CR>")
+map("n", "<S-Tab>", "<cmd> BufferLineCyclePrev <CR>")
+map("n", "<C-q>", "<cmd> bd <CR>")
+
+-- comment.nvim
+map("n", "<leader>/", "gcc", { remap = true })
+map("v", "<leader>/", "gc", { remap = true })
+
+-- format
+map("n", "<leader>fm", function()
+    require("conform").format()
+end)
