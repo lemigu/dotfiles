@@ -9,9 +9,10 @@ map("n", "<leader>ff", "<cmd> Telescope find_files <CR>")
 map("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
 
 -- bufferline, cycle buffers
-map("n", "<Tab>", "<cmd> BufferLineCycleNext <CR>")
-map("n", "<S-Tab>", "<cmd> BufferLineCyclePrev <CR>")
+map("n", "<S-Tab>", "<cmd> BufferLineCycleNext <CR>")
+--map("n", "<S-Tab>", "<cmd> BufferLineCyclePrev <CR>")
 map("n", "<C-q>", "<cmd> bd <CR>")
+map("n", "<Tab>", "<cmd> b# <CR>", { remap = true })
 
 -- comment.nvim
 map("n", "<leader>/", "gcc", { remap = true })
