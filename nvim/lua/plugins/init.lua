@@ -1,8 +1,18 @@
+local statusline_opts = require "plugins.configs.statusline"
+
 return {
     { lazy = true, "nvim-lua/plenary.nvim" },
 
     { "nvim-tree/nvim-web-devicons", opts = {} },
-    { "echasnovski/mini.statusline", opts = {} },
+    --{ "echasnovski/mini.statusline", config = require "plugins.configs.statusline" },
+
+    {
+        "echasnovski/mini.statusline",
+        config = function()
+            require("mini.statusline").setup(statusline_opts)
+        end,
+    },
+
     { "lewis6991/gitsigns.nvim", opts = {} },
 
     { "EdenEast/nightfox.nvim" },
