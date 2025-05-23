@@ -35,3 +35,15 @@ vim.lsp.config("*", { capabilities = capabilities })
 local servers = { "gopls", "lua_ls" }
 
 vim.lsp.enable(servers)
+
+vim.diagnostic.config {
+    virtual_text = {
+        prefix = "",
+        source = "always",
+        spacing = 4,
+    },
+    signs = false,
+    underline = false,
+    update_in_insert = false,
+    severity_sort = true,
+}
