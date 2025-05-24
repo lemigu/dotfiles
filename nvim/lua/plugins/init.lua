@@ -26,7 +26,7 @@ return {
         end,
     },
 
-    { "EdenEast/nightfox.nvim" },
+    { "nyoom-engineering/oxocarbon.nvim" },
 
     {
         "nvim-tree/nvim-tree.lua",
