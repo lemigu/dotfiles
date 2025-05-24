@@ -12,7 +12,7 @@ return {
     },
 
     completion = {
-        ghosu_text = { enabled = false },
+        ghost_text = { enabled = false },
         list = {
             selection = {
                 preselect = false,
