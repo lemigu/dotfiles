@@ -1,3 +1,3 @@
 vim.api.nvim_create_user_command("MasonInstallAll", function()
-    vim.cmd "MasonInstall lua-language-server stylua prettier gopls pylsp"
+    vim.cmd "MasonInstall lua-language-server stylua gopls terraform-ls"
 end, {})
