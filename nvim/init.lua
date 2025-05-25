@@ -1,6 +1,7 @@
 require "options"
 require "mappings"
 require "commands"
+require "colors"
 
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
@@ -20,5 +21,3 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = require "plugins"
 
 require("lazy").setup(plugins, require "lazy_config")
-
-vim.cmd "colorscheme oxocarbon"

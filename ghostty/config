@@ -1,0 +1,16 @@
+window-width=145
+window-height=35
+window-subtitle=false
+
+cursor-style=block
+shell-integration-features = no-cursor
+
+font-family = "JetBrains Mono Nerd Font"
+font-size = 18
+
+theme="grayscale.conf"
+
+auto-update=off
+
+background-opacity=0.9
+background=#000000
