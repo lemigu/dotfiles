@@ -9,5 +9,7 @@ return {
     formatters_by_ft = {
         lua = { "stylua" },
         go = { "gofmt" },
+        terraform = { "terraform_fmt" },
+        tf = { "terraform_fmt" },
     },
 }
