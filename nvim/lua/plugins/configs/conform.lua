@@ -8,7 +8,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 return {
     formatters_by_ft = {
         lua = { "stylua" },
-        go = { "gofmt" },
+        go = { "gofmt", "goimports" },
         terraform = { "terraform_fmt" },
         tf = { "terraform_fmt" },
     },
