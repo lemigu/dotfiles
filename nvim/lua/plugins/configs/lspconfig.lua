@@ -32,7 +32,32 @@ capabilities.textDocument.completion.completionItem = {
 }
 
 vim.lsp.config("*", { capabilities = capabilities })
-vim.lsp.config("gopls", { settings = { gopls = { buildFlags = { "-tags=integration,godog,test" } } } })
+
+vim.lsp.config("lua_ls", {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { "vim" },
+            },
+            workspace = {
+                library = vim.api.nvim_get_runtime_file("", true),
+                checkThirdParty = false,
+            },
+            telemetry = {
+                enable = false,
+            },
+        },
+    },
+})
+
+vim.lsp.config("gopls", {
+    settings = {
+        gopls = {
+            buildFlags = { "-tags=integration,godog,test" },
+        },
+    },
+})
+
 local servers = { "gopls", "lua_ls", "terraformls", "markdown_oxide" }
 
 vim.lsp.enable(servers)
