@@ -32,6 +32,7 @@ capabilities.textDocument.completion.completionItem = {
 }
 
 vim.lsp.config("*", { capabilities = capabilities })
+vim.lsp.config("gopls", { settings = { gopls = { buildFlags = { "-tags=integration,godog,test" } } } })
 local servers = { "gopls", "lua_ls", "terraformls", "markdown_oxide" }
 
 vim.lsp.enable(servers)
