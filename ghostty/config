@@ -10,7 +10,9 @@ font-size = 20
 
 theme="grayscale.conf"
 
+macos-titlebar-style = hidden
+
 auto-update=off
 
-background-opacity=0.9
+#background-opacity=0.9
 background=#000000
